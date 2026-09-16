@@ -1,22 +1,23 @@
 /* styles.css - shared styles for all pages + homepage
-   Palette and type follow the Figma design: dark maroon background,
-   Montserrat, and the #A8FF35 green call-to-action. */
+   Palette: deep navy and slate on white, with a single steel-blue accent.
+   Type: Montserrat, carried over from the Figma design. */
 
 :root {
-  --bg-base: #140708;
-  --bg-deep: #0c0506;
-  --surface: rgba(255, 255, 255, 0.045);
-  --surface-strong: rgba(255, 255, 255, 0.07);
-  --border-soft: rgba(255, 255, 255, 0.10);
-  --accent: #a8ff35;
-  --accent-soft: rgba(168, 255, 53, 0.16);
-  --accent-warm: #ff7a4d;
-  --text-light: #f7f2ee;
-  --text-muted: #bdb0a8;
-  --radius-lg: 18px;
-  --radius-md: 12px;
-  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.45);
-  --ease: 0.25s ease;
+  --navy: #13355c;
+  --navy-deep: #0d2440;
+  --accent: #2f6fb0;
+  --accent-soft: #eef4fa;
+  --ink: #101a2b;
+  --ink-soft: #55647a;
+  --line: #e3e8ef;
+  --line-strong: #cfd8e4;
+  --bg: #ffffff;
+  --bg-alt: #f6f8fb;
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --shadow-sm: 0 1px 2px rgba(16, 26, 43, 0.06);
+  --shadow-md: 0 12px 28px rgba(16, 26, 43, 0.10);
+  --ease: 0.2s ease;
 }
 
 * {
@@ -24,22 +25,19 @@
 }
 
 body {
-  background-color: var(--bg-base);
-  /* Layered glows over a dark base give the flat maroon some depth. */
-  background-image:
-    radial-gradient(900px 500px at 12% -10%, rgba(168, 255, 53, 0.10), transparent 60%),
-    radial-gradient(800px 480px at 88% 0%, rgba(255, 122, 77, 0.12), transparent 62%),
-    linear-gradient(180deg, #2a0d0c 0%, var(--bg-base) 48%, var(--bg-deep) 100%);
-  background-attachment: fixed;
-  color: var(--text-light);
+  background-color: var(--bg);
+  background-image: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 420px);
+  background-repeat: no-repeat;
+  color: var(--ink);
   font-family: 'Montserrat', Arial, sans-serif;
   min-height: 100vh;
-  line-height: 1.6;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: var(--accent);
-  color: #10240a;
+  background: var(--navy);
+  color: #ffffff;
 }
 
 a {
@@ -55,19 +53,19 @@ a {
 /* ---------- Navigation bar ---------- */
 
 .site-nav {
-  padding: 16px 0;
-  background-color: rgba(16, 7, 8, 0.72);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border-soft);
+  padding: 14px 0;
+  background-color: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
 }
 
 .site-nav .navbar-brand {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: var(--text-light);
+  color: var(--ink);
   font-weight: 700;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.2px;
 }
 
 .brand-mark {
@@ -75,28 +73,30 @@ a {
   place-items: center;
   width: 38px;
   height: 38px;
-  border-radius: 10px;
-  background: linear-gradient(140deg, var(--accent), #74d21a);
-  color: #10240a;
-  font-size: 15px;
-  font-weight: 800;
+  border-radius: 8px;
+  background-color: var(--navy);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
   flex-shrink: 0;
 }
 
 .brand-name {
-  font-size: 18px;
+  font-size: 17px;
+  color: var(--ink);
 }
 
 .site-nav .nav-link {
   position: relative;
-  color: var(--text-muted);
+  color: var(--ink-soft);
   margin-left: 26px;
   font-size: 15px;
   font-weight: 500;
   padding-bottom: 4px;
 }
 
-/* Animated underline on hover and for the current page */
+/* Understated underline for hover and the current page */
 .site-nav .nav-link::after {
   content: "";
   position: absolute;
@@ -104,13 +104,13 @@ a {
   bottom: 0;
   height: 2px;
   width: 0;
-  background: var(--accent);
+  background-color: var(--navy);
   transition: width var(--ease);
 }
 
 .site-nav .nav-link:hover,
 .site-nav .nav-link.active {
-  color: var(--text-light);
+  color: var(--navy);
 }
 
 .site-nav .nav-link:hover::after,
@@ -119,245 +119,246 @@ a {
 }
 
 .navbar-toggler {
-  border-color: var(--border-soft);
+  border-color: var(--line-strong);
 }
 
 /* ---------- Shared type ---------- */
 
 .eyebrow {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 2.4px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 18px;
 }
 
 .title-accent {
-  background: linear-gradient(100deg, var(--accent) 0%, #e8ff9c 45%, var(--accent-warm) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--accent);
 }
 
 .section-head {
-  margin-bottom: 36px;
+  margin-bottom: 34px;
 }
 
 .section-title {
-  font-size: clamp(24px, 3vw, 32px);
+  font-size: clamp(22px, 2.8vw, 30px);
   font-weight: 700;
+  color: var(--ink);
   margin-bottom: 6px;
 }
 
 .section-sub {
-  color: var(--text-muted);
+  color: var(--ink-soft);
   margin-bottom: 0;
 }
 
 /* ---------- Hero (homepage) ---------- */
 
 .hero {
-  padding: clamp(70px, 11vw, 130px) 0 clamp(50px, 7vw, 90px);
+  padding: clamp(64px, 10vw, 118px) 0 clamp(48px, 7vw, 84px);
 }
 
 .hero-inner {
-  max-width: 980px;
+  max-width: 940px;
   margin: 0 auto;
 }
 
 .hero-title {
-  font-size: clamp(34px, 6.4vw, 66px);
-  font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -1px;
-  color: #ffffff;
-  margin-bottom: 26px;
+  font-size: clamp(32px, 5.8vw, 60px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.8px;
+  color: var(--navy-deep);
+  margin-bottom: 24px;
 }
 
 .hero-subtitle {
-  font-size: clamp(17px, 2.1vw, 24px);
+  font-size: clamp(16px, 1.9vw, 21px);
   font-weight: 400;
-  color: var(--text-muted);
-  max-width: 760px;
-  margin: 0 auto 40px;
+  color: var(--ink-soft);
+  max-width: 720px;
+  margin: 0 auto 38px;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 16px;
+  gap: 14px;
 }
 
 /* ---------- Buttons ---------- */
 
-/* Call-to-action: the design's green fill, 10px radius, drop shadow */
 .btn-cta {
   min-width: 180px;
-  padding: 14px 34px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--accent), #8fe61f);
-  color: #10240a;
-  font-size: 18px;
-  font-weight: 700;
-  border: none;
-  box-shadow: 0 10px 26px rgba(168, 255, 53, 0.22);
-  transition: transform var(--ease), box-shadow var(--ease), filter var(--ease);
+  padding: 13px 32px;
+  border-radius: var(--radius-md);
+  background-color: var(--navy);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid var(--navy);
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--ease), transform var(--ease), box-shadow var(--ease);
 }
 
 .btn-cta:hover,
 .btn-cta:focus {
-  color: #10240a;
-  transform: translateY(-2px);
-  box-shadow: 0 16px 34px rgba(168, 255, 53, 0.32);
-  filter: brightness(1.05);
+  background-color: var(--navy-deep);
+  border-color: var(--navy-deep);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-ghost {
-  padding: 14px 30px;
-  border-radius: 10px;
-  border: 1px solid var(--border-soft);
-  background-color: transparent;
-  color: var(--text-light);
-  font-size: 17px;
+  padding: 13px 28px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line-strong);
+  background-color: #ffffff;
+  color: var(--ink);
+  font-size: 16px;
   font-weight: 600;
   transition: border-color var(--ease), background-color var(--ease), color var(--ease);
 }
 
 .btn-ghost:hover,
 .btn-ghost:focus {
-  border-color: var(--accent);
+  border-color: var(--navy);
   background-color: var(--accent-soft);
-  color: var(--text-light);
+  color: var(--navy);
 }
 
 /* ---------- Feature cards (homepage grid) ---------- */
 
 .features {
-  padding-bottom: clamp(60px, 8vw, 100px);
+  padding-bottom: clamp(56px, 7vw, 92px);
 }
 
 .feature-card {
   position: relative;
-  background: linear-gradient(170deg, var(--surface-strong), var(--surface));
-  border: 1px solid var(--border-soft);
+  background-color: #ffffff;
+  border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  padding: 32px 28px 26px;
-  overflow: hidden;
+  padding: 30px 26px 24px;
+  box-shadow: var(--shadow-sm);
   transition: transform var(--ease), border-color var(--ease), box-shadow var(--ease);
 }
 
-/* Accent line that grows across the top on hover */
-.feature-card::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto auto 0;
-  height: 3px;
-  width: 0;
-  background: linear-gradient(90deg, var(--accent), var(--accent-warm));
-  transition: width 0.35s ease;
-}
-
 .feature-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(168, 255, 53, 0.35);
-  box-shadow: var(--shadow-soft);
-}
-
-.feature-card:hover::before {
-  width: 100%;
+  transform: translateY(-3px);
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow-md);
 }
 
 .step-badge {
   display: inline-grid;
   place-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  background: var(--accent-soft);
-  border: 1px solid rgba(168, 255, 53, 0.3);
-  color: var(--accent);
-  font-size: 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: var(--accent-soft);
+  color: var(--navy);
+  font-size: 13px;
   font-weight: 700;
   margin-bottom: 18px;
 }
 
 .feature-title {
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 700;
+  color: var(--ink);
   margin-bottom: 10px;
 }
 
 .feature-text {
   font-size: 15.5px;
-  color: var(--text-muted);
+  color: var(--ink-soft);
   margin-bottom: 18px;
 }
 
 .feature-meta {
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 600;
-  letter-spacing: 1.4px;
+  letter-spacing: 1.3px;
   text-transform: uppercase;
-  color: rgba(189, 176, 168, 0.7);
+  color: #8a97a8;
   margin-bottom: 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
 }
 
 /* ---------- Closing panel ---------- */
 
 .cta-panel {
-  background: linear-gradient(120deg, rgba(168, 255, 53, 0.12), rgba(255, 122, 77, 0.08));
-  border: 1px solid var(--border-soft);
+  background-color: var(--navy);
   border-radius: var(--radius-lg);
   padding: clamp(28px, 4vw, 44px);
-  margin-bottom: clamp(60px, 8vw, 100px);
+  margin-bottom: clamp(56px, 7vw, 92px);
+  color: #ffffff;
 }
 
 .cta-title {
-  font-size: clamp(22px, 2.6vw, 28px);
+  font-size: clamp(21px, 2.5vw, 27px);
   font-weight: 700;
+  color: #ffffff;
   margin-bottom: 8px;
 }
 
 .cta-text {
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.78);
   max-width: 620px;
+}
+
+/* Invert the button where it sits on the navy panel */
+.cta-panel .btn-cta {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: var(--navy);
+}
+
+.cta-panel .btn-cta:hover,
+.cta-panel .btn-cta:focus {
+  background-color: var(--accent-soft);
+  border-color: var(--accent-soft);
+  color: var(--navy-deep);
 }
 
 /* ---------- Inner page headers (About / Contact) ---------- */
 
 .page-head {
-  padding: clamp(50px, 7vw, 86px) 0 26px;
+  padding: clamp(46px, 6vw, 78px) 0 24px;
 }
 
 .page-title {
-  font-size: clamp(30px, 5vw, 52px);
-  font-weight: 800;
-  line-height: 1.12;
-  letter-spacing: -0.6px;
-  color: #ffffff;
-  margin-bottom: 22px;
+  font-size: clamp(28px, 4.4vw, 46px);
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: -0.5px;
+  color: var(--navy-deep);
+  margin-bottom: 20px;
 }
 
 .page-lead {
-  font-size: clamp(16px, 1.6vw, 19px);
-  color: var(--text-muted);
-  max-width: 860px;
+  font-size: clamp(15.5px, 1.5vw, 18px);
+  color: var(--ink-soft);
+  max-width: 840px;
   margin-bottom: 0;
 }
 
 /* ---------- Footer ---------- */
 
 .site-footer {
-  border-top: 1px solid var(--border-soft);
-  padding: 34px 0;
-  color: var(--text-muted);
+  border-top: 1px solid var(--line);
+  background-color: var(--bg-alt);
+  padding: 32px 0;
+  color: var(--ink-soft);
   font-size: 14px;
 }
 
 .footer-name {
-  color: var(--text-light);
+  color: var(--ink);
   font-weight: 600;
 }
 
@@ -375,12 +376,12 @@ a {
 }
 
 .footer-links a {
-  color: var(--text-muted);
+  color: var(--ink-soft);
   text-decoration: none;
 }
 
 .footer-links a:hover {
-  color: var(--accent);
+  color: var(--navy);
 }
 
 /* ---------- Responsive ---------- */
@@ -394,7 +395,7 @@ a {
 @media (max-width: 991.98px) {
   /* Collapsed menu: stack the links with breathing room */
   .site-nav .navbar-collapse {
-    padding-top: 12px;
+    padding-top: 10px;
   }
 
   .site-nav .nav-link {
@@ -409,7 +410,7 @@ a {
 
 @media (max-width: 768px) {
   .hero {
-    padding-top: 56px;
+    padding-top: 52px;
   }
 
   .hero-actions .btn {
@@ -417,7 +418,7 @@ a {
   }
 
   .feature-card {
-    padding: 26px 22px;
+    padding: 24px 20px;
   }
 }
 
