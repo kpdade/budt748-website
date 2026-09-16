@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kushaal Pelluru | Homepage</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation bar (Bootstrap navbar, collapses to a hamburger on small screens) -->
+  <nav class="navbar navbar-expand-lg navbar-dark site-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Kushaal Pelluru</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Homepage</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero section -->
+  <header class="hero">
+    <div class="container text-center">
+      <h1 class="hero-title">LET'S CREATE A WEBSITE DESIGN</h1>
+      <p class="hero-subtitle">
+        Today let's create a sample website design in Figma and export its corresponding HTML and CSS code.
+      </p>
+      <a href="about.html" class="btn btn-cta">Get Started</a>
+    </div>
+  </header>
+
+  <!-- Three-column feature row (Bootstrap 12-column grid) -->
+  <section class="container features">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="feature-card h-100">
+          <h2 class="feature-title">Design</h2>
+          <p class="feature-text">
+            Lay out the pages on a 12-column grid in Figma with a 80px margin and 20px gutter.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card h-100">
+          <h2 class="feature-title">Build</h2>
+          <p class="feature-text">
+            Convert the design into HTML and CSS, then style it in VS Code with the Live Server extension.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card h-100">
+          <h2 class="feature-title">Deploy</h2>
+          <p class="feature-text">
+            Push the finished site to GitHub and publish it for free with GitHub Pages.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p class="mb-0">Kushaal Pelluru &middot; BUDT748, Fall 2026</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

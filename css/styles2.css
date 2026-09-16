@@ -1,0 +1,36 @@
+/* styles2.css - About page only */
+
+.course-details {
+  padding-bottom: 100px;
+}
+
+.detail-card {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  padding: 28px;
+}
+
+.detail-label {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.detail-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .detail-value {
+    font-size: 17px;
+  }
+}

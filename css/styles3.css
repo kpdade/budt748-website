@@ -1,0 +1,60 @@
+/* styles3.css - Contact page only */
+
+.contact-body {
+  padding-bottom: 100px;
+}
+
+.contact-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.contact-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 40px;
+  font-size: 18px;
+  line-height: 2;
+}
+
+.contact-list a {
+  color: var(--text-light);
+  text-decoration: underline;
+}
+
+.contact-list a:hover {
+  color: var(--accent);
+}
+
+/* Form fields on the dark background */
+.contact-body .form-label {
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.contact-body .form-control {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-light);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.contact-body .form-control::placeholder {
+  color: rgba(203, 191, 182, 0.6);
+}
+
+.contact-body .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent);
+  color: var(--text-light);
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .contact-list {
+    font-size: 16px;
+  }
+}
