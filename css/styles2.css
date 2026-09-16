@@ -1,36 +1,125 @@
 /* styles2.css - About page only */
 
 .course-details {
-  padding-bottom: 100px;
+  padding-bottom: clamp(50px, 6vw, 80px);
 }
 
 .detail-card {
-  background-color: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-left: 4px solid var(--accent);
-  border-radius: 10px;
-  padding: 28px;
+  position: relative;
+  background: linear-gradient(170deg, var(--surface-strong), var(--surface));
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: 30px 28px;
+  overflow: hidden;
+  transition: transform var(--ease), border-color var(--ease), box-shadow var(--ease);
+}
+
+/* Accent bar down the left edge */
+.detail-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-warm));
+}
+
+.detail-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(168, 255, 53, 0.3);
+  box-shadow: var(--shadow-soft);
 }
 
 .detail-label {
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .detail-value {
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.detail-note {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+.ta-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.ta-list li {
+  font-size: 17px;
   font-weight: 600;
   color: var(--text-light);
+  padding: 7px 0;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.ta-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* ---------- Course outline ---------- */
+
+.course-outline {
+  padding-bottom: clamp(60px, 8vw, 100px);
+}
+
+.outline-item {
+  padding: 26px 24px;
+  border-radius: var(--radius-md);
+  background-color: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-top: 2px solid rgba(168, 255, 53, 0.4);
+  transition: background-color var(--ease), border-color var(--ease);
+}
+
+.outline-item:hover {
+  background-color: var(--surface-strong);
+  border-color: rgba(168, 255, 53, 0.35);
+}
+
+.outline-step {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.outline-title {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.outline-text {
+  font-size: 15px;
+  color: var(--text-muted);
   margin-bottom: 0;
-  line-height: 1.6;
 }
 
 @media (max-width: 768px) {
   .detail-value {
-    font-size: 17px;
+    font-size: 19px;
+  }
+
+  .ta-list li {
+    font-size: 16px;
   }
 }

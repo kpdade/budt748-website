@@ -5,15 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kushaal Pelluru Lakshminarasimhan | Homepage</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <!-- Navigation bar (Bootstrap navbar, collapses to a hamburger on small screens) -->
-  <nav class="navbar navbar-expand-lg navbar-dark site-nav">
+  <nav class="navbar navbar-expand-lg navbar-dark site-nav sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Kushaal Pelluru Lakshminarasimhan</a>
+      <a class="navbar-brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">KP</span>
+        <span class="brand-name">Kushaal Pelluru Lakshminarasimhan</span>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -30,48 +35,92 @@
 
   <!-- Hero section -->
   <header class="hero">
-    <div class="container text-center">
-      <h1 class="hero-title">LET'S CREATE A WEBSITE DESIGN</h1>
+    <div class="container text-center hero-inner">
+      <p class="eyebrow">BUDT748 &middot; Fall 2026 &middot; Client-Side Technologies</p>
+      <h1 class="hero-title">LET'S CREATE A <span class="title-accent">WEBSITE DESIGN</span></h1>
       <p class="hero-subtitle">
         Today let's create a sample website design in Figma and export its corresponding HTML and CSS code.
       </p>
-      <a href="about.html" class="btn btn-cta">Get Started</a>
+      <div class="hero-actions">
+        <a href="about.html" class="btn btn-cta">Get Started</a>
+        <a href="contact.html" class="btn btn-ghost">Contact the team</a>
+      </div>
     </div>
   </header>
 
   <!-- Three-column feature row (Bootstrap 12-column grid) -->
   <section class="container features">
+    <div class="section-head">
+      <h2 class="section-title">From design to deployment</h2>
+      <p class="section-sub">Three steps, start to finish.</p>
+    </div>
     <div class="row g-4">
       <div class="col-md-4">
-        <div class="feature-card h-100">
-          <h2 class="feature-title">Design</h2>
+        <article class="feature-card h-100">
+          <span class="step-badge">01</span>
+          <h3 class="feature-title">Design</h3>
           <p class="feature-text">
-            Lay out the pages on a 12-column grid in Figma with a 80px margin and 20px gutter.
+            Lay out the pages on a 12-column grid in Figma with an 80px margin and 20px gutter.
           </p>
-        </div>
+          <p class="feature-meta">Figma</p>
+        </article>
       </div>
       <div class="col-md-4">
-        <div class="feature-card h-100">
-          <h2 class="feature-title">Build</h2>
+        <article class="feature-card h-100">
+          <span class="step-badge">02</span>
+          <h3 class="feature-title">Build</h3>
           <p class="feature-text">
             Convert the design into HTML and CSS, then style it in VS Code with the Live Server extension.
           </p>
-        </div>
+          <p class="feature-meta">HTML &middot; CSS &middot; Bootstrap</p>
+        </article>
       </div>
       <div class="col-md-4">
-        <div class="feature-card h-100">
-          <h2 class="feature-title">Deploy</h2>
+        <article class="feature-card h-100">
+          <span class="step-badge">03</span>
+          <h3 class="feature-title">Deploy</h3>
           <p class="feature-text">
             Push the finished site to GitHub and publish it for free with GitHub Pages.
           </p>
+          <p class="feature-meta">Git &middot; GitHub Pages</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing call to action -->
+  <section class="container">
+    <div class="cta-panel">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <h2 class="cta-title">Built with Bootstrap 5</h2>
+          <p class="cta-text mb-0">
+            A responsive navbar, the 12-column grid, styled buttons and form controls &mdash; all from the
+            Bootstrap CDN, layered with custom CSS.
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="about.html" class="btn btn-cta">See the course</a>
         </div>
       </div>
     </div>
   </section>
 
   <footer class="site-footer">
-    <div class="container text-center">
-      <p class="mb-0">Kushaal Pelluru Lakshminarasimhan &middot; BUDT748, Fall 2026</p>
+    <div class="container">
+      <div class="row gy-3 align-items-center">
+        <div class="col-md-6">
+          <p class="footer-name mb-0">Kushaal Pelluru Lakshminarasimhan</p>
+          <p class="footer-meta mb-0">BUDT748, Fall 2026</p>
+        </div>
+        <div class="col-md-6">
+          <ul class="footer-links mb-0">
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </footer>
 

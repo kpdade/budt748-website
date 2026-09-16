@@ -5,15 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kushaal Pelluru Lakshminarasimhan | Contact</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/styles3.css">
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark site-nav">
+  <nav class="navbar navbar-expand-lg navbar-dark site-nav sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Kushaal Pelluru Lakshminarasimhan</a>
+      <a class="navbar-brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">KP</span>
+        <span class="brand-name">Kushaal Pelluru Lakshminarasimhan</span>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -30,58 +35,110 @@
 
   <header class="page-head">
     <div class="container">
-      <h1 class="page-title">Contact Us</h1>
+      <p class="eyebrow">Get in touch</p>
+      <h1 class="page-title">Contact <span class="title-accent">Us</span></h1>
       <p class="page-lead">Reach out to the course team for support or inquiries.</p>
     </div>
   </header>
 
   <section class="container contact-body">
-    <div class="row g-5">
+    <div class="row g-4 g-lg-5">
 
       <!-- Course team contact details -->
-      <div class="col-lg-6">
+      <div class="col-lg-5">
         <h2 class="contact-heading">Professor Contact</h2>
         <ul class="contact-list">
-          <li>Paul T Shapiro &ndash; <a href="mailto:pshapiro@umd.edu">pshapiro@umd.edu</a></li>
+          <li class="contact-item">
+            <span class="contact-avatar" aria-hidden="true">PS</span>
+            <span class="contact-details">
+              <span class="contact-name">Paul T Shapiro</span>
+              <a class="contact-mail" href="mailto:pshapiro@umd.edu">pshapiro@umd.edu</a>
+            </span>
+          </li>
         </ul>
 
         <h2 class="contact-heading">TA Contact</h2>
         <ul class="contact-list">
-          <li>Bharath Sreekumar &ndash; <a href="mailto:bsreekum@umd.edu">bsreekum@umd.edu</a></li>
-          <li>Caifu Lin &ndash; <a href="mailto:clin0817@terpmail.umd.edu">clin0817@terpmail.umd.edu</a></li>
-          <li>Sumanth Devara &ndash; <a href="mailto:sdevara@umd.edu">sdevara@umd.edu</a></li>
+          <li class="contact-item">
+            <span class="contact-avatar" aria-hidden="true">BS</span>
+            <span class="contact-details">
+              <span class="contact-name">Bharath Sreekumar</span>
+              <a class="contact-mail" href="mailto:bsreekum@umd.edu">bsreekum@umd.edu</a>
+            </span>
+          </li>
+          <li class="contact-item">
+            <span class="contact-avatar" aria-hidden="true">CL</span>
+            <span class="contact-details">
+              <span class="contact-name">Caifu Lin</span>
+              <a class="contact-mail" href="mailto:clin0817@terpmail.umd.edu">clin0817@terpmail.umd.edu</a>
+            </span>
+          </li>
+          <li class="contact-item">
+            <span class="contact-avatar" aria-hidden="true">SD</span>
+            <span class="contact-details">
+              <span class="contact-name">Sumanth Devara</span>
+              <a class="contact-mail" href="mailto:sdevara@umd.edu">sdevara@umd.edu</a>
+            </span>
+          </li>
         </ul>
       </div>
 
       <!-- Bootstrap form -->
-      <div class="col-lg-6">
-        <h2 class="contact-heading">Send a Message</h2>
-        <form id="contactForm" novalidate>
-          <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" rows="4" placeholder="How can we help?" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-cta">Submit</button>
-          <div id="formNote" class="alert alert-success mt-3 d-none" role="alert">
-            Thanks! This demo form does not send mail &mdash; please use the email addresses listed.
-          </div>
-        </form>
+      <div class="col-lg-7">
+        <div class="form-panel">
+          <h2 class="contact-heading">Send a Message</h2>
+          <p class="form-intro">Questions about the course, the project, or office hours.</p>
+          <form id="contactForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+              </div>
+              <div class="col-12">
+                <label for="subject" class="form-label">Subject</label>
+                <select class="form-select" id="subject">
+                  <option selected>General question</option>
+                  <option>Project support</option>
+                  <option>Office hours</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="How can we help?" required></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-cta">Submit</button>
+              </div>
+            </div>
+            <div id="formNote" class="alert alert-success mt-4 d-none" role="alert">
+              Thanks! This demo form does not send mail &mdash; please use the email addresses listed.
+            </div>
+          </form>
+        </div>
       </div>
 
     </div>
   </section>
 
   <footer class="site-footer">
-    <div class="container text-center">
-      <p class="mb-0">Kushaal Pelluru Lakshminarasimhan &middot; BUDT748, Fall 2026</p>
+    <div class="container">
+      <div class="row gy-3 align-items-center">
+        <div class="col-md-6">
+          <p class="footer-name mb-0">Kushaal Pelluru Lakshminarasimhan</p>
+          <p class="footer-meta mb-0">BUDT748, Fall 2026</p>
+        </div>
+        <div class="col-md-6">
+          <ul class="footer-links mb-0">
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </footer>
 

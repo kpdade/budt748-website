@@ -5,15 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kushaal Pelluru Lakshminarasimhan | About</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/styles2.css">
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark site-nav">
+  <nav class="navbar navbar-expand-lg navbar-dark site-nav sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Kushaal Pelluru Lakshminarasimhan</a>
+      <a class="navbar-brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">KP</span>
+        <span class="brand-name">Kushaal Pelluru Lakshminarasimhan</span>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -30,7 +35,8 @@
 
   <header class="page-head">
     <div class="container">
-      <h1 class="page-title">BMGT407 - INFORMATION SYSTEMS PROJECTS</h1>
+      <p class="eyebrow">About the course</p>
+      <h1 class="page-title">BMGT407 &mdash; <span class="title-accent">Information Systems Projects</span></h1>
       <p class="page-lead">
         BMGT407 is the capstone course for Information Systems (IS) majors, where students apply their
         knowledge to develop real-world IS solutions for business clients. Through a complete IS development
@@ -44,29 +50,78 @@
   <section class="container course-details">
     <div class="row g-4">
       <div class="col-md-4">
-        <div class="detail-card h-100">
+        <article class="detail-card h-100">
           <h2 class="detail-label">Semester Details</h2>
           <p class="detail-value">Spring 2027</p>
-        </div>
+          <p class="detail-note">Capstone term</p>
+        </article>
       </div>
       <div class="col-md-4">
-        <div class="detail-card h-100">
+        <article class="detail-card h-100">
           <h2 class="detail-label">Professor</h2>
           <p class="detail-value">Paul T Shapiro</p>
-        </div>
+          <p class="detail-note">Course instructor</p>
+        </article>
       </div>
       <div class="col-md-4">
-        <div class="detail-card h-100">
+        <article class="detail-card h-100">
           <h2 class="detail-label">Teaching Assistants</h2>
-          <p class="detail-value">Bharath Sreekumar<br>Caifu Lin<br>Sumanth Devara</p>
+          <ul class="ta-list">
+            <li>Bharath Sreekumar</li>
+            <li>Caifu Lin</li>
+            <li>Sumanth Devara</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- What the course covers -->
+  <section class="container course-outline">
+    <div class="section-head">
+      <h2 class="section-title">What the capstone covers</h2>
+      <p class="section-sub">A complete IS development process, end to end.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="outline-item h-100">
+          <span class="outline-step">01</span>
+          <h3 class="outline-title">Discovery</h3>
+          <p class="outline-text">Work with a business client to define the problem and gather requirements.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="outline-item h-100">
+          <span class="outline-step">02</span>
+          <h3 class="outline-title">Design</h3>
+          <p class="outline-text">Model the solution and design the interface before any code is written.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="outline-item h-100">
+          <span class="outline-step">03</span>
+          <h3 class="outline-title">Prototype</h3>
+          <p class="outline-text">Build a functional prototype that solves a practical business challenge.</p>
         </div>
       </div>
     </div>
   </section>
 
   <footer class="site-footer">
-    <div class="container text-center">
-      <p class="mb-0">Kushaal Pelluru Lakshminarasimhan &middot; BUDT748, Fall 2026</p>
+    <div class="container">
+      <div class="row gy-3 align-items-center">
+        <div class="col-md-6">
+          <p class="footer-name mb-0">Kushaal Pelluru Lakshminarasimhan</p>
+          <p class="footer-meta mb-0">BUDT748, Fall 2026</p>
+        </div>
+        <div class="col-md-6">
+          <ul class="footer-links mb-0">
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </footer>
 
