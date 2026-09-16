@@ -128,10 +128,10 @@ left, the three page links right-aligned from 768px up.
 
 1. Eyebrow `BUDT748 · Fall 2026 · Client-Side Technologies`
 2. Hero `LET'S CREATE A WEBSITE DESIGN` (second half accented), centered
-3. Subtitle: "Today let's create a sample website design in Figma and export its corresponding HTML
-   and CSS code."
+3. Subtitle: "Today let's create a sample website design with Claude and build out its corresponding
+   HTML and CSS code."
 4. Buttons: `Get Started` → about.html, `Contact the team` → contact.html
-5. Section "From design to deployment" with three `col-md-4` cards: **Design** (Figma), **Build**
+5. Section "From design to deployment" with three `col-md-4` cards: **Design** (Claude Design), **Build**
    (HTML · CSS · Bootstrap), **Deploy** (Git · GitHub Pages)
 6. Navy `.cta-panel`: "Built with Bootstrap 5" and a `See the course` button
 

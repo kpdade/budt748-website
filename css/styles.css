@@ -1,6 +1,6 @@
 /* styles.css - shared styles for all pages + homepage
    Palette: deep navy and slate on white, with a single steel-blue accent.
-   Type: Montserrat, carried over from the Figma design. */
+   Type: Montserrat. See CLAUDE-DESIGN.md for the full spec. */
 
 :root {
   --navy: #13355c;

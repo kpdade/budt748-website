@@ -1,7 +1,8 @@
 # BUDT748 Client-Side Technologies Assignment
 
 A three-page website (Homepage, About, Contact) built with HTML, CSS, and Bootstrap 5,
-following the BUDT748 Fall 2026 Figma / VS Code / GitHub Pages tutorial.
+following the BUDT748 Fall 2026 client-side technologies assignment, designed with Claude and
+published with VS Code and GitHub Pages.
 
 **Live site:** https://kpdade.github.io/budt748-website/
 
@@ -22,6 +23,6 @@ images/         Exported assets
 
 - Bootstrap 5.3 (CDN) for the responsive navbar, 12-column grid, buttons, and form
 - Montserrat from Google Fonts
-- Custom CSS matching the Figma design (dark background, #A8FF35 accent)
+- Custom CSS built from the design spec in CLAUDE-DESIGN.md (navy and slate on white, #2F6FB0 accent)
 
 Kushaal Pelluru Lakshminarasimhan - BUDT748, Fall 2026
