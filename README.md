@@ -24,4 +24,4 @@ images/         Exported assets
 - Montserrat from Google Fonts
 - Custom CSS matching the Figma design (dark background, #A8FF35 accent)
 
-Kushaal Pelluru - BUDT748, Fall 2026
+Kushaal Pelluru Lakshminarasimhan - BUDT748, Fall 2026

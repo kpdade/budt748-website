@@ -33,7 +33,7 @@ Keep these values handy — they are exactly what the website uses:
 
 ## 3. Navigation bar (this is where your name goes)
 
-1. Press **T** (Text tool) and click near the top-left of the frame. Type `Kushaal Pelluru`.
+1. Press **T** (Text tool) and click near the top-left of the frame. Type `Kushaal Pelluru Lakshminarasimhan`.
 2. With the text selected, set the font to **Montserrat**, weight **Bold**, size **24**, color **white**.
 3. Press **T** again and add three separate text items near the top-right: `Homepage`, `About`, `Contact`.
    Set each to Montserrat Regular, 16, color `#CBBFB6`.
